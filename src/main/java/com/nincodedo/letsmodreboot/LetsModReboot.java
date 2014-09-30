@@ -1,5 +1,6 @@
 package com.nincodedo.letsmodreboot;
 
+import com.nincodedo.letsmodreboot.configuration.ConfigurationHandler;
 import com.nincodedo.letsmodreboot.proxy.IProxy;
 import com.nincodedo.letsmodreboot.reference.Reference;
 
@@ -22,7 +23,7 @@ public class LetsModReboot {
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event){
-		
+		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 	}
 	
 	@Mod.EventHandler
