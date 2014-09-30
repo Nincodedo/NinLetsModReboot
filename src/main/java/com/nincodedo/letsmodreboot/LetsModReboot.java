@@ -5,6 +5,7 @@ import com.nincodedo.letsmodreboot.proxy.IProxy;
 import com.nincodedo.letsmodreboot.reference.Reference;
 import com.nincodedo.letsmodreboot.utility.LogHelper;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.InstanceFactory;
@@ -25,6 +26,7 @@ public class LetsModReboot {
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 		LogHelper.info("Pre Initialization complete");
 	}
 	
