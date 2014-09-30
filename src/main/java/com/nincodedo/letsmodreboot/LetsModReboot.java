@@ -1,6 +1,7 @@
 package com.nincodedo.letsmodreboot;
 
 import com.nincodedo.letsmodreboot.proxy.IProxy;
+import com.nincodedo.letsmodreboot.reference.Reference;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -10,13 +11,13 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid="LetsModReboot", name="Lets Mod Reboot", version="1.7.10-1.0")
+@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION)
 public class LetsModReboot {
 	
-	@Mod.Instance("LetsModReboot")
+	@Mod.Instance(Reference.MOD_ID)
 	public static LetsModReboot instance;
 	
-	@SidedProxy(clientSide = "", serverSide = "")
+	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
 	public static IProxy proxy;
 	
 	@Mod.EventHandler
