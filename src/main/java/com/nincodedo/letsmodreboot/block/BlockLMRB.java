@@ -1,5 +1,6 @@
 package com.nincodedo.letsmodreboot.block;
 
+import com.nincodedo.letsmodreboot.creativetab.CreativeTabLMRB;
 import com.nincodedo.letsmodreboot.reference.Reference;
 
 import cpw.mods.fml.relauncher.Side;
@@ -13,6 +14,7 @@ public class BlockLMRB extends Block {
 
 	public BlockLMRB(Material material) {
 		super(material);
+		this.setCreativeTab(CreativeTabLMRB.LMBR_TAB);
 	}
 
 	public BlockLMRB(){

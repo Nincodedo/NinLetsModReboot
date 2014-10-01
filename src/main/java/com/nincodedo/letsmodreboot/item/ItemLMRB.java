@@ -4,6 +4,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.nincodedo.letsmodreboot.creativetab.CreativeTabLMRB;
 import com.nincodedo.letsmodreboot.reference.Reference;
 
 import cpw.mods.fml.relauncher.Side;
@@ -12,6 +13,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ItemLMRB extends Item {
 	public ItemLMRB() {
 		super();
+		this.setCreativeTab(CreativeTabLMRB.LMBR_TAB);
 	}
 
 	@Override
