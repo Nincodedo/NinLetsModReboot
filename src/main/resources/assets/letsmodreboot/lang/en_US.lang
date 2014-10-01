@@ -1,3 +1,7 @@
 item.letsmodreboot:mapleLeaf.name=Maple Leaf of Fancy
 tile.letsmodreboot:flag.name=Leafy Flag
 itemGroup.letsmodreboot=Let's Mod Reboot
+
+keys.letsmodreboot.category=Let's Mod Reboot
+keys.letsmodreboot.charge=Charge
+keys.letsmodreboot.release=Release

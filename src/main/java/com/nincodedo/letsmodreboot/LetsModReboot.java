@@ -1,5 +1,6 @@
 package com.nincodedo.letsmodreboot;
 
+import com.nincodedo.letsmodreboot.client.handler.KeyInputEventHandler;
 import com.nincodedo.letsmodreboot.handler.ConfigurationHandler;
 import com.nincodedo.letsmodreboot.init.ModBlocks;
 import com.nincodedo.letsmodreboot.init.ModItems;
@@ -31,6 +32,9 @@ public class LetsModReboot {
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 		
+		proxy.registerKeyBindings();
+		
+		
 		ModItems.init();
 		ModBlocks.init();
 		
@@ -40,6 +44,7 @@ public class LetsModReboot {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event){
 		Recipes.init();
+		FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
 		LogHelper.info("Initialization complete");
 	}
 	
