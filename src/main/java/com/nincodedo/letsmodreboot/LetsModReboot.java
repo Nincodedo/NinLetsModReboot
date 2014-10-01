@@ -1,6 +1,7 @@
 package com.nincodedo.letsmodreboot;
 
 import com.nincodedo.letsmodreboot.handler.ConfigurationHandler;
+import com.nincodedo.letsmodreboot.init.ModBlocks;
 import com.nincodedo.letsmodreboot.init.ModItems;
 import com.nincodedo.letsmodreboot.proxy.IProxy;
 import com.nincodedo.letsmodreboot.reference.Reference;
@@ -30,6 +31,7 @@ public class LetsModReboot {
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 		
 		ModItems.init();
+		ModBlocks.init();
 		
 		LogHelper.info("Pre Initialization complete");
 	}
