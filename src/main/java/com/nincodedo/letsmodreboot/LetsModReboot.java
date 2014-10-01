@@ -3,6 +3,7 @@ package com.nincodedo.letsmodreboot;
 import com.nincodedo.letsmodreboot.handler.ConfigurationHandler;
 import com.nincodedo.letsmodreboot.init.ModBlocks;
 import com.nincodedo.letsmodreboot.init.ModItems;
+import com.nincodedo.letsmodreboot.init.Recipes;
 import com.nincodedo.letsmodreboot.proxy.IProxy;
 import com.nincodedo.letsmodreboot.reference.Reference;
 import com.nincodedo.letsmodreboot.utility.LogHelper;
@@ -38,6 +39,7 @@ public class LetsModReboot {
 	
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event){
+		Recipes.init();
 		LogHelper.info("Initialization complete");
 	}
 	
